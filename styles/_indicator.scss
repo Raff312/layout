@@ -1,0 +1,27 @@
+.indicator {
+    background-color: $hovered-icon-color;
+    color: #FFF;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cash-indicator {
+    display: inline-flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    background-color: $button-color;
+    padding: 6px 15px;
+    min-width: auto;
+    min-height: auto;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.time {
+    margin-left: 10px;
+    min-width: fit-content;
+    min-height: auto;
+}

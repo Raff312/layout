@@ -1,0 +1,14 @@
+.book {
+    display: grid;
+    grid-template-columns: 35fr 65fr;
+    overflow: hidden;
+
+    &__right {
+        overflow: hidden;
+        padding-right: 30px;
+    }
+
+    &__left {
+        padding-left: 30px;
+    }
+}

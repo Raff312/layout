@@ -1,0 +1,52 @@
+.body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: $primary-color;
+    padding: 30px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.general {
+    background-color: $primary-color;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 71px);
+
+    display: grid;
+    grid-template-columns: 32fr 68fr;
+    column-gap: 30px;
+}
+
+.main-content {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px;
+    overflow: hidden;
+
+    &__right-part {
+        display: grid;
+        gap: 30px;
+        grid-column: span 2;
+        overflow: hidden;
+    }
+
+    &__left-part {
+        background-color: #FFF;
+        overflow: hidden;
+    }
+}
+
+.right-part {
+    display: grid;
+    grid-auto-flow: row;
+
+    &__row {
+        background-color: #FFF;
+
+        &_size-l {
+            grid-row: span 2;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "styles/variables";
+@import "styles/layout";
+@import "styles/navbar";
+@import "styles/box";
+@import "styles/sidebar";
+@import "styles/box-scroll";
+@import "styles/heading";
+@import "styles/book";
+@import "styles/search-field";
+@import "styles/photo";
+@import "styles/icon";
+@import "styles/indicator";
+@import "styles/msg-area";
+@import "styles/input-field";
+
+[contenteditable]:empty:before {
+    content: attr(data-placeholder);
+    color: $placeholder-color;
+    display: inline-block;
+}
+
+.unread-line {
+    padding: 21px 0 11px 0;
+    font-weight: bold;
+    font-size: 14pt;
+    min-height: auto;
+
+    .sidebar-item {
+        padding: 0;
+
+        &__before {
+            min-width: fit-content;
+            margin-right: 12px;
+        }
+
+        &__text.line {
+            background-color: $border-color;
+            height: 2px;
+        }
+    }
+}

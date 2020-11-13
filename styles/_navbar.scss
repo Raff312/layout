@@ -1,0 +1,55 @@
+.navbar {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 21px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &__logo a {
+        background-color: $button-color;
+        border-radius: 20px;
+        color: white;
+        padding: 0 20px;
+        font-weight: 700;
+        font-size: 34px;
+        text-decoration: none;
+    }
+
+    &__menu {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 0 10px;
+
+        .item__link {
+            display: flex;
+            flex: 1 1 1px;
+            text-decoration: none;
+            justify-content: center;
+            padding: 14px;
+            font-size: 20px;
+
+            i {
+                color: $icon-color;
+            }
+
+            &:hover i {
+                color: $hovered-icon-color;
+            }
+        }
+    }
+}

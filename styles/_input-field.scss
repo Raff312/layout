@@ -1,0 +1,32 @@
+.input-field {
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    padding: 12px 17px;
+    box-sizing: border-box;
+
+    &__box {
+        cursor: text;
+        outline: none;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        min-width: 40px;
+
+        &__text {
+            color: $button-color;
+            font-weight: medium;
+            text-decoration: none;
+        }
+
+        &__icon {
+            margin-left: 5px;
+            color: $icon-color;
+        }
+    }
+}

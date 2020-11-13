@@ -1,0 +1,38 @@
+.photo {
+    display: inline-flex;
+
+    &_size-m {
+        width: 40px;
+        height: 40px;
+    }
+
+    &_size-s {
+        width: 32px;
+        height: 32px;
+    }
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+
+    .activity-indicator {
+        min-width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: -10px;
+        z-index: 1;
+
+        &_active {
+            background-color: $green-indicator-color;
+        }
+
+        &_away {
+            background-color: $yellow-indicator-color;
+        }
+
+        &_dont-distrub {
+            background-color: $red-indicator-color;
+        }
+    }
+}

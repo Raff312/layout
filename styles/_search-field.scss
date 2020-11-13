@@ -1,0 +1,27 @@
+.search-field {
+    display: flex;
+    height: 31px;
+    border-bottom: 2px solid $icon-color;
+
+    .icon-search {
+        cursor: pointer;
+    }
+
+    .sidebar-item {
+        min-height: 31px;
+        padding: 0;
+        align-items: end;
+        width: -webkit-fill-available;
+
+        &__text {
+            outline: none;
+            color: $hovered-icon-color;
+            cursor: text;
+        }
+
+        .icon {
+            color: $icon-color;
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    </head>
+    <body class="body">
+        <nav class="navbar body__navbar">
+            <div class="navbar__logo"><a href="#">Miro</a></div>
+            <div class="menu navbar__menu">
+                <ul class="menu__list">
+                    <li class="item menu__item">
+                        <a href="#" class="item__link">
+                            <i class="icon icon-search"></i>
+                        </a>
+                    </li>
+                    <li class="item menu__item">
+                        <a href="#" class="item__link">
+                            <i class="icon icon-bell"></i>
+                        </a>
+                    </li>
+                    <li class="item menu__item">
+                        <a href="#" class="item__link">
+                            <i class="icon icon-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="general body__general">
+            <div class="sidebar general__sidebar box box-scroll">
+                <div class="sidebar__header box-scroll__header box__header">
+                    <div class="sidebar-item sidebar-item_no-hover">
+                        <div class="sidebar-item__before photo photo_size-m">
+                            <img src="photos/Profile image.png">
+                        </div>
+                        <span class="sidebar-item__text heading heading_size-m">Miroslav Minev</span>
+                        <span class="sidebar-item__after cash-indicator">$52</span>
+                    </div>
+                </div>
+                <nav class="sidebar__body sidebar-menu box-scroll__body">
+                    <ul class="sidebar-menu__list">
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-dashboard"></i>
+                                <span class="sidebar-item__text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-trading-view"></i>
+                                <span class="sidebar-item__text">Tradeview</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-files"></i>
+                                <span class="sidebar-item__text">File manager</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-analytics"></i>
+                                <span class="sidebar-item__text">Traffic analyzer</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-users"></i>
+                                <span class="sidebar-item__text">Users manager</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-calendar"></i>
+                                <span class="sidebar-item__text">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item sidebar-item_selected" href="#">
+                                <i class="sidebar-item__before icon icon-messages"></i>
+                                <span class="sidebar-item__text">Messages</span>
+                                <span class="sidebar-item__after indicator">8</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu__item">
+                            <a class="sidebar-item" href="#">
+                                <i class="sidebar-item__before icon icon-payments"></i>
+                                <span class="sidebar-item__text">Payments</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidebar__footer box-scroll__footer box__footer">
+                    <a class="sidebar-item" href="#">
+                        <i class="sidebar-item__before icon icon-loguot"></i>
+                        <span class="sidebar-item__text">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="main-content general__main-content">
+                <div class="right-part main-content__right-part">
+                    <div class="box right-part__row book">
+                        <div class="book__right box-scroll">
+                            <div class="search-field box-scroll__header">
+                                <div class="sidebar-item sidebar-item_no-hover">
+                                    <i class="sidebar-item__before icon icon-search"></i>
+                                    <span class="sidebar-item__text" contenteditable="true" data-placeholder="Find contacts"></span>
+                                </div>
+                            </div>
+                            <div class="box-scroll__body">
+                                <ul class="sidebar-menu__list">
+                                    <li class="sidebar-menu__item">
+                                        <a class="sidebar-item" href="#">
+                                            <div class="sidebar-item__before photo photo_size-m">
+                                                <span class="activity-indicator activity-indicator_active"></span>
+                                                <img src="photos/1.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Francesca Metts</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu__item">
+                                        <a class="sidebar-item sidebar-item_selected" href="#">
+                                            <div class="sidebar-item__before photo photo_size-m">
+                                                <span class="activity-indicator activity-indicator_active"></span>
+                                                <img src="photos/2.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Malcolm Quaday</span>
+                                            <span class="sidebar-item__after indicator">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu__item">
+                                        <a class="sidebar-item" href="#">
+                                            <div class="sidebar-item__before photo photo_size-m">
+                                                <span class="activity-indicator activity-indicator_away"></span>
+                                                <img src="photos/3.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Lindsey Rivard</span>
+                                            <span class="sidebar-item__after indicator">4</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu__item">
+                                        <a class="sidebar-item" href="#">
+                                            <div class="sidebar-item__before photo photo_size-m">
+                                                <span class="activity-indicator activity-indicator_dont-distrub"></span>
+                                                <img src="photos/4.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Elizabeth Hurton</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu__item">
+                                        <a class="sidebar-item" href="#">
+                                            <div class="sidebar-item__before photo photo_size-m">
+                                                <span class="activity-indicator activity-indicator_active"></span>
+                                                <img src="photos/5.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Albert Pollock</span>
+                                            <span class="sidebar-item__after indicator">1</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="book__left box-scroll msg-area">
+                            <div class="msg-area__history box-scroll__body">
+                                <div class="message message_other">
+                                    <div class="message__header">
+                                        <div class="sidebar-item sidebar-item_no-hover">
+                                            <div class="sidebar-item__before photo photo_size-s">
+                                                <img src="photos/2.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Malcolm Quaday</span>
+                                            <span class="sidebar-item__after time">10:24</span>
+                                        </div>
+                                    </div>
+                                    <div class="message__body message__body_other">
+                                        It is a long established fact that a reader will be distracted by the
+                                    </div>
+                                </div>
+                                <div class="message message_me">
+                                    <div class="message__header message__header_me">
+                                        <div class="sidebar-item sidebar-item_no-hover">
+                                            <span class="sidebar-item__before">Miroslav M</span>
+                                            <span class="sidebar-item__text time">7 minutes ago</span>
+                                            <div class="sidebar-item__after photo photo_size-s">
+                                                <img src="photos/Profile image.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message__body message__body_me">
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                                    </div>
+                                </div>
+                                <div class="unread-line">
+                                    <div class="sidebar-item sidebar-item_no-hover">
+                                        <span class="sidebar-item__before">UNREAD</span>
+                                        <span class="sidebar-item__text line"></span>
+                                    </div>
+                                </div>
+                                <div class="message message_other">
+                                    <div class="message__header">
+                                        <div class="sidebar-item sidebar-item_no-hover">
+                                            <div class="sidebar-item__before photo photo_size-s">
+                                                <img src="photos/2.png">
+                                            </div>
+                                            <span class="sidebar-item__text">Malcolm Quaday</span>
+                                            <span class="sidebar-item__after time">10:24</span>
+                                        </div>
+                                    </div>
+                                    <!-- is it ok unread modificator for body? -->
+                                    <div class="message__body message__body_other message__body_unread">
+                                        It is a long established fact that a reader will be distracted by the
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg-area__input input-field box-scroll__footer">
+                                <div class="input-field__box" data-placeholder="Start typing here" contenteditable="true"></div>
+                                <div class="input-field__button">
+                                    <!-- can I do so? -->
+                                    <a class="input-field__button__text" href="#">
+                                        Send <i class="input-field__button__icon icon-paper-plane-o"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

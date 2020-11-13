@@ -1,0 +1,16 @@
+.box {
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 20px 10px rgba($color: $shadow-color, $alpha: 0.4);
+    padding: 15px 30px;
+
+    &__header {
+        border-bottom: 3px solid $border-color;
+        padding-bottom: 13px;
+    }
+
+    &__footer {
+        border-top: 2px solid $border-color;
+        padding-top: 13px;
+    }
+}
