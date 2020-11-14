@@ -1,3 +1,10 @@
+/**
+    плохое именование
+    .msg-area и есть .message
+    как правильно
+    1) .messages, .message, .messages__item / __single
+    2) .msg-area, .msg, .msg-area__item / __single
+ */
 .msg-area {
     display: grid;
     grid-template-areas: "msg-area__history" "msg-area__input";
@@ -14,10 +21,16 @@
         min-height: 64px;
     }
 
+    // опять не по БЭМ, вложенный блок в блок
+    /**
+        [1] у нас ещё есть браузеры не на вебките. В любом случае это хак, который был принят из-за того что
+        уже что-то пошло не так, как правильно: width: 100% или flex: 1 и ОПРЕДЕЛЕННО это стили уровня элемента, а не блока .message,
+        т.е .msg-area__item например, т.к. сам .message не должен знать о контейнере в котором его сейчас отображают
+     */
     .message {
         display: inline-flex;
         flex-direction: column;
-        width: -webkit-fill-available;
+        width: -webkit-fill-available; // [1]
 
         &__header {
             width: fit-content;
@@ -26,7 +39,7 @@
             &_me {
                 margin-left: auto;
 
-                .sidebar-item {
+                .sidebar-item { // не БЭМ, вложенный блок
                     &__before {
                         width: auto;
                         margin: 0;

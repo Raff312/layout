@@ -13,27 +13,46 @@
 @import "styles/msg-area";
 @import "styles/input-field";
 
+/**
+    Никогда не оставляй подобный блок кода (в частности хаки) без комментариев.
+    Если это нагуглено то кроме описания желательно ещё и линк
+
+    + это хак, это точно input, а не span
+ */
 [contenteditable]:empty:before {
     content: attr(data-placeholder);
     color: $placeholder-color;
     display: inline-block;
 }
 
+/**
+    [1] это не по БЭМ, совсем
+
+    [2] https://caniuse.com/?search=fit-content вроде ок, но стоит чекнуть файрфокс
+    Здесь явно случился какой-то хак, который надо было задокументировать.
+    Проблема кроется в использовании класса с установленным width: 30px sidebar-item__before
+    и потом приходится перекрывать этот класс, что определенно является хаком.
+    Как правильно: не использовать класс там где он не подходит, в частности сделать в одну строку .unread-line
+    всегда можно было через флексы и элементу с текстом unread дать flex-shrink: 0
+    а элементу строки на всю ширину flex: 1 1 auto и всё
+
+    Отдельный блок всегда помещается в отдельный файл, иначе будет свалка
+ */
 .unread-line {
     padding: 21px 0 11px 0;
     font-weight: bold;
     font-size: 14pt;
     min-height: auto;
 
-    .sidebar-item {
+    .sidebar-item { // [1]
         padding: 0;
 
         &__before {
-            min-width: fit-content;
+            min-width: fit-content; // [2]
             margin-right: 12px;
         }
 
-        &__text.line {
+        &__text.line { // [1]
             background-color: $border-color;
             height: 2px;
         }

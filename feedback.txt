@@ -1,0 +1,14 @@
+https://prnt.sc/vizlyv
+пропустил мета тег
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+в остальном по лейауту норм, скроллы у каждого блока работают корректно
+
+>>> Не получилось нормально сделать скролл. Побочный эффект такой
+да, box-shadow + overflow:hidden в принципе несовместимы,
+т.е. overflow hidden надо писать на теге уровнем ниже
+
+https://prnt.sc/vizsu1
+html не валиден, такие вещи надо исправлять https://validator.w3.org/nu/#textarea
+
+в исходниках есть css, css.map по сути лучше предоставлять только исходники + систему сборки для scss на вебпаке / галпе или 
+через консольную команду через node-sass

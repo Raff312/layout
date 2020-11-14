@@ -12,7 +12,7 @@
     background-color: $primary-color;
     box-sizing: border-box;
     width: 100%;
-    height: calc(100% - 71px);
+    height: calc(100% - 71px); // магические цифры всегда выносят в переменные, как в программировании
 
     display: grid;
     grid-template-columns: 32fr 68fr;
@@ -33,7 +33,7 @@
     }
 
     &__left-part {
-        background-color: #FFF;
+        background-color: #FFF; // копипаста фона, достойная быть вынесенной в отдельную переменную, типа container-bg-color
         overflow: hidden;
     }
 }
@@ -43,7 +43,7 @@
     grid-auto-flow: row;
 
     &__row {
-        background-color: #FFF;
+        background-color: #FFF;  // копипаста фона, достойная быть вынесенной в отдельную переменную, типа container-bg-color
 
         &_size-l {
             grid-row: span 2;

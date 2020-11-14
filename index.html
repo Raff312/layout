@@ -12,6 +12,9 @@
         <nav class="navbar body__navbar">
             <div class="navbar__logo"><a href="#">Miro</a></div>
             <div class="menu navbar__menu">
+<!--                Здесь плохо, высоту верхнего навбара сейчас определяет браузер относительно дефолтных стилей ul тега.-->
+<!--                Как правильно: явно задавать паддинги у навбара. Высота тоже подойдет, если внутри нет динамического текста, -->
+<!--                который может определить высоту блока-->
                 <ul class="menu__list">
                     <li class="item menu__item">
                         <a href="#" class="item__link">
@@ -37,12 +40,17 @@
                 <div class="sidebar__header box-scroll__header box__header">
                     <div class="sidebar-item sidebar-item_no-hover">
                         <div class="sidebar-item__before photo photo_size-m">
+<!--                            у тега img всегда должен быть alt на случай если картинка не прогрузится-->
                             <img src="photos/Profile image.png">
                         </div>
                         <span class="sidebar-item__text heading heading_size-m">Miroslav Minev</span>
                         <span class="sidebar-item__after cash-indicator">$52</span>
                     </div>
                 </div>
+
+<!--                sidebar-menu плохое имя класса, ты однозначно определил что таких стилей меню-->
+<!--                не может на сайте быть кроме как в сайдбаре, а по факту это mainmenu или navmenu-->
+<!--                которое сейчас находится в сайдбаре.-->
                 <nav class="sidebar__body sidebar-menu box-scroll__body">
                     <ul class="sidebar-menu__list">
                         <li class="sidebar-menu__item">
@@ -105,6 +113,10 @@
             </div>
 
             <div class="main-content general__main-content">
+<!--                right-part, left-part плохие имена, даже в текущей разметке их пришлось поменять местами,-->
+<!--                что должно подсказать что выбор этих имен - плохой выбор.-->
+<!--                Как правильно: например primary/secondary, general/additional, master/detail и т.д.-->
+<!--                Если речь идет о одинаковых пространствах это .column или .row со всякими суффиксами и префиксами-->
                 <div class="right-part main-content__right-part">
                     <div class="box right-part__row book">
                         <div class="book__right box-scroll">
@@ -186,6 +198,8 @@
                                 <div class="message message_me">
                                     <div class="message__header message__header_me">
                                         <div class="sidebar-item sidebar-item_no-hover">
+<!--                                            Здесь считерил с порядком блоков, они должны идти в том же порядке как и в случае входящего сообщения-->
+<!--                                            Порядок будет определяться на уровне css, хотя утверждение спорное, сильно зависит от реализации-->
                                             <span class="sidebar-item__before">Miroslav M</span>
                                             <span class="sidebar-item__text time">7 minutes ago</span>
                                             <div class="sidebar-item__after photo photo_size-s">
@@ -199,6 +213,9 @@
                                 </div>
                                 <div class="unread-line">
                                     <div class="sidebar-item sidebar-item_no-hover">
+<!--                                        UNREAD - плохо, в английском нет такой аббревиатуры, правильно это Unread.-->
+<!--                                        Как правильно: через css делать text-transform: uppercase-->
+<!--                                        Ещё, как sidebar-item оказался вне сайдбара? Явная ошибка в именовании класса-->
                                         <span class="sidebar-item__before">UNREAD</span>
                                         <span class="sidebar-item__text line"></span>
                                     </div>
@@ -210,10 +227,16 @@
                                                 <img src="photos/2.png">
                                             </div>
                                             <span class="sidebar-item__text">Malcolm Quaday</span>
+
+<!--                                            https://www.w3schools.com/tags/tag_time.asp-->
                                             <span class="sidebar-item__after time">10:24</span>
                                         </div>
                                     </div>
                                     <!-- is it ok unread modificator for body? -->
+<!--                                    да, модификатор пойдет, можно для элемента его делать.-->
+<!--                                    Однако, почти всегда они делаются для блока-->
+<!--                                    https://ru.bem.info/methodology/css/-->
+<!--                                    читай здесь про вложенные селекторы-->
                                     <div class="message__body message__body_other message__body_unread">
                                         It is a long established fact that a reader will be distracted by the
                                     </div>
@@ -223,6 +246,7 @@
                                 <div class="input-field__box" data-placeholder="Start typing here" contenteditable="true"></div>
                                 <div class="input-field__button">
                                     <!-- can I do so? -->
+<!--                                    нелья, это точно button, ссылка всегда куда-то ведёт-->
                                     <a class="input-field__button__text" href="#">
                                         Send <i class="input-field__button__icon icon-paper-plane-o"></i>
                                     </a>

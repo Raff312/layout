@@ -7,12 +7,12 @@
     align-items: center;
     flex-direction: row;
 
-    &__logo a {
+    &__logo a { // нельзя использовать теги в БЭМ
         background-color: $button-color;
         border-radius: 20px;
-        color: white;
+        color: white; // почти везде ты пишешь #fff
         padding: 0 20px;
-        font-weight: 700;
+        font-weight: 700; // почти везде ты пишешь bold
         font-size: 34px;
         text-decoration: none;
     }
@@ -37,7 +37,7 @@
 
         .item__link {
             display: flex;
-            flex: 1 1 1px;
+            flex: 1 1 1px; // 1px это хак, норм значение flex: 1 1 auto. Исходя из стилей, которые ты писал тебе этот хак для ИЕ не нужен
             text-decoration: none;
             justify-content: center;
             padding: 14px;

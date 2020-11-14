@@ -1,7 +1,7 @@
 .box {
     background-color: #FFF;
     border-radius: 20px;
-    box-shadow: 0 20px 10px rgba($color: $shadow-color, $alpha: 0.4);
+    box-shadow: 0 20px 10px rgba($color: $shadow-color, $alpha: 0.4); // можно rgba($shadow-color, 0.4) не усложняй
     padding: 15px 30px;
 
     &__header {

@@ -1,3 +1,16 @@
+/**
+    [1] плохо сделал по отступам, можно было решить через row-gap: 30.
+    Альтернативно надо делать .widget + .widget {margin-left: 30px}
+    А твоё решение через дополнительные теги в разметке, это излишне
+
+    #2 right и left крайне плохое имя классов, т.к. в css именно свойства определяют положение,
+    а имена классов служат обозначением сущностей в верстке
+    Как можно .book__item
+
+    #3 .book - это книга, хотя явно ты имел ввиду какой-то другой смысл
+    популярнее это .article, .main, .content, .section, .box и т.д.
+ */
+
 .book {
     display: grid;
     grid-template-columns: 35fr 65fr;
@@ -5,10 +18,10 @@
 
     &__right {
         overflow: hidden;
-        padding-right: 30px;
+        padding-right: 30px; // [1]
     }
 
     &__left {
-        padding-left: 30px;
+        padding-left: 30px; // [1]
     }
 }
