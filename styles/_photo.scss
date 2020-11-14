@@ -1,27 +1,35 @@
+/**
+ [1] у блока ОБЯЗАТЕЛЬНО должны быть стили по умолчанию
+ Сейчас ты явно указываешь что просто так фотка не заработает и программист будет обязан всегда указывать модификатор, это ошибка
+
+ [2] z-index применяется при наличие position значения, без исключений.
+
+ [3] не по БЭМ, теги нельзя использовать для стилей. Класс вложенный в класс - это два разных независимых блока.
+ */
 .photo {
     display: inline-flex;
 
-    &_size-m {
+    &_size-m { // [1]
         width: 40px;
         height: 40px;
     }
 
-    &_size-s {
+    &_size-s { // [1]
         width: 32px;
         height: 32px;
     }
 
-    img {
-        width: inherit;
-        height: inherit;
+    img { // [3]
+        width: inherit; // 100% ?
+        height: inherit; // 100% ?
     }
 
-    .activity-indicator {
+    .activity-indicator { // [3]
         min-width: 10px;
         height: 10px;
         border-radius: 50%;
         margin-right: -10px;
-        z-index: 1;
+        z-index: 1; // [2]
 
         &_active {
             background-color: $green-indicator-color;

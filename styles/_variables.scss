@@ -5,6 +5,15 @@ $icon-color: #D0DBE5;
 $hovered-icon-color: #52575D;
 $border-color: #EBF2F7;
 $placeholder-color: #B3B8BD;
-$green-indicator-color: #1BC167;
-$yellow-indicator-color: #F4DB50;
-$red-indicator-color: #ED4C4C;
+
+/**
+  [1] так нельзя, ты в переменной хардкодишь как выглядит цвет,
+  как правильно: дать имена через качественную характеристику: .success-color, .danger-color, .usual-color
+  Если считать что речь идет действительно только о статусах, то норм будет .active, .inactive, .indeterminate
+  или .online-status, .offline-status, .hidden-status
+  Даже именна классов, которые ты дал в .photo отлично подошли бы к переменным, лучше чем цвета
+  В частности yellow вполне себе может стать серым, а зелёный будет относительно .primary цвета сайта в другой цветовой расскладке
+ */
+$green-indicator-color: #1BC167; // [1]
+$yellow-indicator-color: #F4DB50; // [1]
+$red-indicator-color: #ED4C4C; // [1]

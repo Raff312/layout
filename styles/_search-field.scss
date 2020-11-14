@@ -11,7 +11,7 @@
         min-height: 31px;
         padding: 0;
         align-items: end;
-        width: -webkit-fill-available;
+        width: -webkit-fill-available; // хак, описал проблему в .msg-area
 
         &__text {
             outline: none;
